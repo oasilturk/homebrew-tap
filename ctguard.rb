@@ -5,21 +5,21 @@
 class Ctguard < Formula
   desc "Detect timing side-channel vulnerabilities in Go code"
   homepage "https://github.com/oasilturk/ctguard"
-  version "0.9.0"
+  version "0.10.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oasilturk/ctguard/releases/download/v0.9.0/ctguard_0.9.0_darwin_amd64.tar.gz"
-      sha256 "e8f491d151af3c84dea645b01e39200afa193bfeb20aa147751621ec4090a68d"
+      url "https://github.com/oasilturk/ctguard/releases/download/v0.10.0/ctguard_0.10.0_darwin_amd64.tar.gz"
+      sha256 "c5f21187859e97d23512fb87aed1c36b454f6b19bdfd0d51959022dd9b11c41d"
 
       define_method(:install) do
         bin.install "ctguard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oasilturk/ctguard/releases/download/v0.9.0/ctguard_0.9.0_darwin_arm64.tar.gz"
-      sha256 "fc8b23eae3fbff7129747f0cacda9c5055b63ab88ec5ced9999bc1122649e6b8"
+      url "https://github.com/oasilturk/ctguard/releases/download/v0.10.0/ctguard_0.10.0_darwin_arm64.tar.gz"
+      sha256 "c905aba0a05a289cf05217556b73ba314fc95eb76e03179c81a926f45ae65007"
 
       define_method(:install) do
         bin.install "ctguard"
@@ -29,15 +29,15 @@ class Ctguard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oasilturk/ctguard/releases/download/v0.9.0/ctguard_0.9.0_linux_amd64.tar.gz"
-      sha256 "a1c8b0c3cca8e07ba8ec3863588e5f6ee99654d0e6905b88f65308753a4f6380"
+      url "https://github.com/oasilturk/ctguard/releases/download/v0.10.0/ctguard_0.10.0_linux_amd64.tar.gz"
+      sha256 "79191c68c54faa6692133e50c143abeff5d71ab29f31d3bee757eaaa0d43c39a"
       define_method(:install) do
         bin.install "ctguard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oasilturk/ctguard/releases/download/v0.9.0/ctguard_0.9.0_linux_arm64.tar.gz"
-      sha256 "47561e21bd07fa72455d52307a3ccf89e4e25081a02449d04459539a988696e8"
+      url "https://github.com/oasilturk/ctguard/releases/download/v0.10.0/ctguard_0.10.0_linux_arm64.tar.gz"
+      sha256 "2a38989867cc2389144f0b0a703bd435d8238f8cceacdf69d80c00bf6ba9711b"
       define_method(:install) do
         bin.install "ctguard"
       end
